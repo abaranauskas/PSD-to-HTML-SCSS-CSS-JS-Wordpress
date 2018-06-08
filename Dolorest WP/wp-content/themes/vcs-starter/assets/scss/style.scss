@@ -1,0 +1,374 @@
+/*
+Backgrounds
+header - #262d2d
+duis aute irute, contacts sekcijos ir naujienu bloku backgrounds: #ffffff
+hero ir contaktu button backgrounds: #262d2d
+contact form border: #bbbdbd
+Hero, news ir footer background: #324544 uzdetas filtras "multiplay" opacity 100% Fill 70%
+
+textai
+logo, hero: #fff
+Menu: #d3d1ce
+hero ir contact button tekstai: #f0f2f4
+antra visa sekcija ir kontaktu sekcijos title: #1f2526
+news sekcijos title: #ffffff
+contact formos tekstas: 1f2526
+*/
+
+// ---------------------general-------------------
+@import '../css/BrandonGrotesque/stylesheet';
+
+/* Reset */
+body, h1{
+	margin: 0;
+	font-family: 'Brandon Grotesque', helvetica, arial, sans-serif;
+	font-size: 16px;
+}
+
+ul {
+	padding: 0;
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+
+
+
+$main-gray: #262d2d;
+$menu-color: #d3d1ce;
+$white: #fff;
+$btn-text: #f0f2f4;
+
+$lh27px: 1.688rem;
+
+/* Main SCSS-CSS */
+
+
+
+.container {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.flex {
+	display: flex;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: $lh27px;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1rem;
+	line-height: 1.563rem;
+	color: #1f2526;
+
+}
+// ---------------------header-------------------
+header {
+	position: fixed;
+	background-color: $main-gray;
+	font-family: 'Libre Baskerville', serif;
+	width: 100%;
+
+	.container {
+		justify-content: space-between;
+		align-items: center;
+		min-height: 70px;
+	}
+
+	.logo {
+		
+		a {
+			color: $white;
+			text-decoration: none;
+			font-size: 1.563rem;
+			line-height: $lh27px;
+			text-transform: uppercase;
+		}
+	}
+
+	ul {
+		li{
+			list-style: none;
+			a{
+				margin: 0 15px;
+				text-decoration: none;
+				color: $menu-color ;
+				font-size: 1rem;
+				line-height: $lh27px;
+
+				&:hover {
+				color: $white;
+				}
+			}
+		}
+	}
+
+	
+}
+
+// ---------------------hero section-------------------
+.hero {
+	background-image: url(../img/hero-bckgr_01.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;	
+	height: 100vh;
+	//background-attachment: fixed;
+    background-position: center;
+	background-color: rgba(50, 69, 68, 0.7); //#324544;
+	background-blend-mode: multiply;
+   
+
+	h1 {
+		padding-top: calc(100vh * 0.43);
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 4.125rem;
+		font-weight: normal;
+ 		font-style: normal;
+		line-height: 4.375rem
+	}
+
+	a {
+		display: block;
+		width: 170px;
+		margin: 0 auto;
+		margin-top: calc(100vh * 0.043);
+		padding: 10px 0;
+		background-color: $main-gray;
+		text-align: center;
+		color: $btn-text;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0.875rem;
+		font-weight: 300;
+		line-height: $lh27px;
+
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+// ---------------------about section-------------------
+#about {
+	padding-top: 105px;
+
+	p{
+		max-width: 620px;
+		text-align: center;
+		margin: 50px auto 105px auto;
+	}
+}
+
+// ---------------------News section-------------------
+
+#news {
+	background-image: url(../img/news-bckgr_02.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;	
+	//height: 100vh;
+	//background-attachment: fixed;
+   	background-position: center top;
+	background-color: rgba(50, 69, 68, 0.7); //#324544;
+	background-blend-mode: multiply;
+
+	h2 {
+		padding-top: 100px;
+		color: $white;
+	}
+
+	.posts-block {
+		margin-top: 50px;
+		height: 460px;
+		background-color: green;
+	}
+
+	.icons-block {
+		padding: 50px 0;
+		text-align: center;
+
+		img:first-child, img:last-child {
+			cursor: pointer;
+			margin: 0 5px;
+		}
+
+	}
+}
+
+// --------------------contact section-------------------
+
+#contact{
+	padding: 100px 0;
+
+	h2{
+		margin-bottom: 45px;
+	}
+
+	.form-block{
+		background-color: red;
+		margin: 0 auto;
+		max-width: 460px;
+		height: 470px;
+	}
+}
+
+// --------------------map section-------------------
+
+footer{
+	height: 360px;
+	background-image: url(../img/map_02.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+
+	img {
+
+	position: relative;
+	top: 50%;
+	}	
+}
+
+// --------------------responsive-------------------
+
+@media screen and (max-width: 640px) {
+
+	header .container {
+		display: block;
+		min-height: 50px;
+		padding: 0 20px;
+
+		.logo {
+			height: 50px;
+			justify-content: space-between;
+			align-items: center;
+
+			a{
+				font-size: 1.125rem;
+			}
+
+			.burger-menu {
+				cursor: pointer;
+
+				div {
+				cursor: pointer;
+			    width: 20px;
+			    height: 2px;
+			    background-color: #fff;
+			    margin: 5px 0;
+				}
+			}
+		}
+
+
+		nav {
+			display: none;
+		}
+
+		nav.show{
+			ul {
+				display: block;
+			}
+
+			display: block;	
+		}
+	}
+
+
+	.hero {
+		height: 380px;
+
+		h1 {
+			padding-top: 140px;
+			font-size: 1.875rem;
+			line-height: 2.063rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	#about {
+		padding-top: 50px;
+
+		p {
+			margin: 25px auto 50px auto;
+		}
+	}
+
+	#news{
+		padding-bottom: 50px;
+
+		h2 {
+			padding-top: 50px;
+		}
+
+		.posts-block {
+		margin-top: 30px;
+		height: 220px;
+		background-color: green;
+		}
+
+		.icons-block {
+			display: none;
+		}
+	}
+
+	#contact {
+		padding: 50px 0;
+
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		.form-block{
+		height: 330px;
+		}
+	}
+}
+
+
+
+//-----------------------------scrolling inner menu------------------------------
+	
+@media screen and (max-height: 200px){ 
+
+	nav {
+  overflow-y: scroll; /* 1 */
+  -webkit-overflow-scrolling: touch; /* 2 */
+	}
+
+	ul {
+	  text-align: justify; /* 3 */
+	  height: 135px; /* 4 */
+	}
+
+	ul:after {
+	  /* 5 */
+	  content: '';
+	  display: inline-block;
+	  height: 100%;
+	}
+
+	li {
+	  display: block; /* 6 */
+	}
+
+}
+
+//-----------------------------scrolling inner menu------------------------------

@@ -1,0 +1,14 @@
+Backgrounds
+header - #262d2
+duis aute irute, contacts sekcijos ir naujienu bloku backgrounds: #ffffff
+hero ir contaktu button backgrounds: #262d2d
+contact form border: #bbbdbd
+Hero, news ir footer background: #324544 uzdetas filtas "multiplay" opacity 100% Fill 70%
+
+textai
+logo, hero: #fff
+Menu: #d3d1ce
+hero ir contact button tekstai: #f0f2f4
+antra visa sekcija ir kontaktu sekcijos title: #1f2526
+news sekcijos title: #ffffff
+contact formos tekstas: 1f2526

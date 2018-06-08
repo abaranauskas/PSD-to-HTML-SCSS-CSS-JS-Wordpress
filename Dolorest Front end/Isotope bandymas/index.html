@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Sablonas</title>	
+<style type="text/css">
+	* { box-sizing: border-box; }
+
+/* inherit height from window */
+html, body { height: 100%; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+  height: 300px; /* inherit height from body */
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 200px; }
+
+</style>
+		
+	
+</head>
+<body>
+
+	<h1>Isotope - masonryHorizontal layout mode</h1>
+
+<div class="grid">
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item grid-item--width2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+  <div class="grid-item grid-item--width2"></div>
+  <div class="grid-item grid-item--width2"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item grid-item--width2"></div>
+  <div class="grid-item grid-item--height2"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+
+<script type="text/javascript" src="js/isotope.pkgd.js"></script>
+
+<script type="text/javascript" src="js/masonry-horizontal.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+</body>		
+</html>
+

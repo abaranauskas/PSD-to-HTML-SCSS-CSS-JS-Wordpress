@@ -1,0 +1,279 @@
+/*
+Theme Name: Dolorest
+Theme URI: http://newcode.lt
+Author: Aidas Baranauskas
+Author URI: http://aidasbaranauskas.com/
+Description: Task for New Code Inc.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dolorest
+*/
+
+/*
+Backgrounds
+header - #262d2d
+duis aute irute, contacts sekcijos ir naujienu bloku backgrounds: #ffffff
+hero ir contaktu button backgrounds: #262d2d
+contact form border: #bbbdbd
+Hero, news ir footer background: #324544 uzdetas filtras "multiplay" opacity 100% Fill 70%
+
+textai
+logo, hero: #fff
+Menu: #d3d1ce
+hero ir contact button tekstai: #f0f2f4
+antra visa sekcija ir kontaktu sekcijos title: #1f2526
+news sekcijos title: #ffffff
+contact formos tekstas: 1f2526
+*/
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("BrandonGrotesque/subset-BrandonGrotesque-Light.eot");
+  src: url("BrandonGrotesque/subset-BrandonGrotesque-Light.eot?#iefix") format("embedded-opentype"), url("BrandonGrotesque/subset-BrandonGrotesque-Light.woff2") format("woff2"), url("BrandonGrotesque/subset-BrandonGrotesque-Light.woff") format("woff"), url("BrandonGrotesque/subset-BrandonGrotesque-Light.ttf") format("truetype"), url("BrandonGrotesque/subset-BrandonGrotesque-Light.svg#BrandonGrotesque-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("BrandonGrotesque/subset-BrandonGrotesque-Regular.eot");
+  src: url("BrandonGrotesque/subset-BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype"), url("BrandonGrotesque/subset-BrandonGrotesque-Regular.woff2") format("woff2"), url("BrandonGrotesque/subset-BrandonGrotesque-Regular.woff") format("woff"), url("BrandonGrotesque/subset-BrandonGrotesque-Regular.ttf") format("truetype"), url("BrandonGrotesque/subset-BrandonGrotesque-Regular.svg#BrandonGrotesque-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("BrandonGrotesque/subset-BrandonGrotesque-Medium.eot");
+  src: url("BrandonGrotesque/subset-BrandonGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("BrandonGrotesque/subset-BrandonGrotesque-Medium.woff2") format("woff2"), url("BrandonGrotesque/subset-BrandonGrotesque-Medium.woff") format("woff"), url("BrandonGrotesque/subset-BrandonGrotesque-Medium.ttf") format("truetype"), url("BrandonGrotesque/subset-BrandonGrotesque-Medium.svg#BrandonGrotesque-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+/* Reset */
+body, h1 {
+  margin: 0;
+  font-family: 'Brandon Grotesque', helvetica, arial, sans-serif;
+  font-size: 16px; }
+
+ul {
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Main SCSS-CSS */
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.688rem;
+  margin: 0; }
+
+p {
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  line-height: 1.563rem;
+  color: #1f2526; }
+
+header {
+  position: fixed;
+  background-color: #262d2d;
+  font-family: 'Libre Baskerville', serif;
+  width: 100%; }
+  header .container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 70px; }
+  header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.563rem;
+    line-height: 1.688rem;
+    text-transform: uppercase; }
+  header ul li {
+    list-style: none; }
+    header ul li a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #d3d1ce;
+      font-size: 1rem;
+      line-height: 1.688rem; }
+      header ul li a:hover {
+        color: #fff; }
+
+.hero {
+  background-image: url(../img/hero-bckgr_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-color: rgba(50, 69, 68, 0.7);
+  background-blend-mode: multiply; }
+  .hero h1 {
+    padding-top: calc(100vh * 0.43);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4.125rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 4.375rem; }
+  .hero a {
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    margin-top: calc(100vh * 0.043);
+    padding: 10px 0;
+    background-color: #262d2d;
+    text-align: center;
+    color: #f0f2f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.688rem; }
+    .hero a:hover {
+      color: #fff; }
+
+#about {
+  padding-top: 105px; }
+  #about p {
+    max-width: 620px;
+    text-align: center;
+    margin: 50px auto 105px auto; }
+
+#news {
+  background-image: url(../img/news-bckgr_02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-color: rgba(50, 69, 68, 0.7);
+  background-blend-mode: multiply; }
+  #news h2 {
+    padding-top: 100px;
+    color: #fff; }
+  #news .posts-block {
+    margin-top: 50px;
+    height: 460px;
+    background-color: green; }
+  #news .icons-block {
+    padding: 50px 0;
+    text-align: center; }
+    #news .icons-block img:first-child, #news .icons-block img:last-child {
+      cursor: pointer;
+      margin: 0 5px; }
+
+#contact {
+  padding: 100px 0; }
+  #contact h2 {
+    margin-bottom: 45px; }
+  #contact .form-block {
+    background-color: red;
+    margin: 0 auto;
+    max-width: 460px;
+    height: 470px; }
+
+footer {
+  height: 360px;
+  background-image: url(../img/map_02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; }
+  footer img {
+    position: relative;
+    top: 50%; }
+
+@media screen and (max-width: 640px) {
+  header .container {
+    display: block;
+    min-height: 50px;
+    padding: 0 20px; }
+    header .container .logo {
+      height: 50px;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      header .container .logo a {
+        font-size: 1.125rem; }
+      header .container .logo .burger-menu {
+        cursor: pointer; }
+        header .container .logo .burger-menu div {
+          cursor: pointer;
+          width: 20px;
+          height: 2px;
+          background-color: #fff;
+          margin: 5px 0; }
+    header .container nav {
+      display: none; }
+    header .container nav.show {
+      display: block; }
+      header .container nav.show ul {
+        display: block; }
+  .hero {
+    height: 380px; }
+    .hero h1 {
+      padding-top: 140px;
+      font-size: 1.875rem;
+      line-height: 2.063rem; }
+  h2 {
+    font-size: 1.5rem; }
+  #about {
+    padding-top: 50px; }
+    #about p {
+      margin: 25px auto 50px auto; }
+  #news {
+    padding-bottom: 50px; }
+    #news h2 {
+      padding-top: 50px; }
+    #news .posts-block {
+      margin-top: 30px;
+      height: 220px;
+      background-color: green; }
+    #news .icons-block {
+      display: none; }
+  #contact {
+    padding: 50px 0; }
+    #contact h2 {
+      margin-bottom: 30px; }
+    #contact .form-block {
+      height: 330px; } }
+
+@media screen and (max-height: 200px) {
+  nav {
+    overflow-y: scroll;
+    /* 1 */
+    -webkit-overflow-scrolling: touch;
+    /* 2 */ }
+  ul {
+    text-align: justify;
+    /* 3 */
+    height: 135px;
+    /* 4 */ }
+  ul:after {
+    /* 5 */
+    content: '';
+    display: inline-block;
+    height: 100%; }
+  li {
+    display: block;
+    /* 6 */ } }
